@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 모든 태그에 대해 적용 */
+    *{
+      margin : 0;
+      box-sizing : border-box;
+    }
+
+    .text-color-green{
+      color:green;
+    }
+
+    .box{
+      background: lightgreen; /* 배경색 */
+      width : 300px; /* 가로크기 */
+      height : 300px; /* 세로높이 */
+      color : black;  /* 글자색 */
+      border-radius: 12px;  /* 모서리 둥글게 */
+      border : 1px solid black; /* 테두리 [선크기 선종류 선색깔] */
+      margin : 100px; /* 외부와의 여백 */
+      padding : 30px; /* 내부와의 여백 */
+      
+    }
+
+    input{
+      display : inline; /* 내 크기만큼 차지 */
+      display : none;  /* 없어짐 */
+      display : inline-block; /* inline 인데 상하 패딩과 마진이 가능 */
+      display : block; /* 한줄 모두 차지 */
+    }
+
+    a{
+      text-decoration : none; /* 밑줄 없애기 */
+      background : blueviolet;
+      color : white;
+      margin-top : 20px; /* 상하좌우 */
+      padding : 8px 15px; /* 상하 , 좌우 */
+      display : inline-block; /* 여백을 주기 위해서 inline -> inline-block */
+    }
+  </style>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <!-- 
+  css : 적용방법 3가지
+  1. 태그의 style 속성을 이용
+  2. style 태그와 셀렉터를 이용
+  3. css 파일과 셀렉터를 이용 
+  -->
+  <p style="color:red;">Hello</p>
+  <p class="text-color-green">Hello</p>
+  
+  <div class="box">
+    <span>글자</span>
+    <input>
+    <input>
+    <a href="https://www.google.com/">구글</a>
+  </div>
+</body>
+</html>
