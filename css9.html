@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>배경이미지</title>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+
+        /* font-family : 폰트 바꿔주기 */
+        font-family: 궁서체;
+        /* 1순위 : Noto Sans KR, 2순위 : sans-serif */
+        font-family: "Noto Sans KR", sans-serif;
+
+        /* 글자 크기 (기본값 12pt) */
+        font-size: 16pt; /* 글자 : pt(고정 크기), rem(부모 폰트 크기) */
+        font-size: 1rem; /* HTML 태그의 글자 크기와 동일하게 */
+        font-size: 1.5rem; /* HTML 태그 글자 크기의 1.5배 */
+
+        /* 글자 두께 (굵기) */
+        font-weight: bolder;
+        font-weight: 700;
+
+        /* 상자 크기 (px , en) */
+        /* px : 0.26mm , en : 나를 감싸는 태그의 비율 */
+      }
+
+      .bk-container {
+        /* background: rgb(172, 172, 172); */
+        background-image: url(./img/image5.jpg); /* 배경 이미지 */
+        background-repeat: no-repeat; /* 반복 채우기 안함 */
+        background-size: cover; /* 여백 없이 전부 다 채우게 변경 */
+        background-position: center; /* 이미지를 중앙부터 그리기 */
+        background-attachment: fixed; /* 스크롤을 해도 이미지의 같은 부분이 보이게 변경 */
+        width: 100vw; /* 보이는 가로 100% */
+        height: 100vh; /* 보이는 세로 100% */
+
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bk-container">
+      <p>배경이미지</p>
+      <img src="./img/image3.jpg" width="300px" height="300px" />
+    </div>
+  </body>
+</html>
