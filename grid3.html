@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+        *{
+            margin:0;
+            box-sizing:border-box;
+        }
+        .container{
+            min-height:800px;
+            border:8px solid black;
+
+            display:grid;
+            grid-template-areas:
+                "box1 box1 box2 box3"
+                "box4 box5 box5 box3"
+                "box6 box5 box5 box7"
+                "box6 box8 box9 box9" 
+            ;
+            gap:10px;
+        }
+        .box{
+            background:#0071FF;
+            font-size:2.5rem;
+            text-align: center;
+            align-content:center;
+        }
+        .box-1{
+            grid-area:box1;
+        }
+        .box-2{
+            grid-area:box2;
+        }
+        .box-3{
+            grid-area:box3;
+        }
+        .box-4{
+            grid-area:box4;
+        }
+        .box-5{
+            grid-area:box5;
+        }
+        .box-6{
+            grid-area:box6;
+        }
+        .box-7{
+            grid-area:box7;
+        }
+        .box-8{
+            grid-area:box8;
+        }
+        .box-9{
+            grid-area:box9;
+        }
+
+        @media(max-width:575px){
+            .container{
+                grid-template-areas:
+                "box1"
+                "box2"
+                "box3"
+                "box4" 
+                "box5"
+                "box7"
+                "box8"
+                "box9"
+            ;
+            }
+            .box-6{
+                display:none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- grid : 격자 -->
+    <div class="container">
+        <div class="box box-1">1</div>
+        <div class="box box-2">2</div>
+        <div class="box box-3">3</div>
+        <div class="box box-4">4</div>
+        <div class="box box-5">5</div>
+        <div class="box box-6">6</div>
+        <div class="box box-7">7</div>
+        <div class="box box-8">8</div>
+        <div class="box box-9">9</div>
+    </div>
+</body>
+</html>

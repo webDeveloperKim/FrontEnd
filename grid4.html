@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+        *{
+            margin:0;
+            box-sizing:border-box;
+        }
+        .container{
+            background:rgb(13,13,20);
+            color:white;
+            min-height:100vh;
+            padding:50px;
+        }
+        .grid-box{
+            display:grid;
+            gap:10px;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-columns: repeat(4, 1fr);
+            /* 최소250px, 최대 1fr (반응형)*/
+            grid-template-columns: repeat(auto-fit, 
+            minmax(250px, 1fr));
+
+            border:1px solid red;
+        }
+        .box{
+            border:1px solid rgb(89, 89, 89);
+            background:rgb(50, 55, 60);
+            border-radius:8px;
+            padding:1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="grid-box">
+            <div class="box">
+                <h2>제목</h2>
+                <p>본문글</p>
+            </div>
+            <div class="box">
+                <h2>제목</h2>
+                <p>본문글</p>
+            </div>
+            <div class="box">
+                <h2>제목</h2>
+                <p>본문글</p>
+            </div>
+            <div class="box">
+                <h2>제목</h2>
+                <p>본문글</p>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

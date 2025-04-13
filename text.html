@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글자 속성</title>
+    <style>
+        *{
+            margin:0;
+            box-sizing: border-box;
+        }
+        .container{
+            padding:2em;
+            border:1px solid yellowgreen;
+            color: green; /* 글자색 */
+            text-align: left; /* 글자 왼쪽 정렬 */
+            text-align: right; /* 글자 오른쪽 정렬 */
+            text-align: center; /* 글자 가운데 정렬 */
+            text-align: justify; /* 글자 양쪽 정렬 */
+            text-decoration: underline; /* 밑줄 */
+            text-decoration: overline; /* 윗줄 */
+            text-decoration: line-through; /* 취소선 */
+            text-decoration: none; /* a태그에 많이 해줌 */
+
+            line-height: 40pt; /* 줄간격 */
+            line-height: normal;
+            letter-spacing: 2.5pt; /* 글자간격 (자간) */
+            letter-spacing: normal;
+
+            font-family: 궁서체, 'arial';
+            font-size: 1rem;
+            font-size: 12pt;   /* HTML(root) 기본 폰트값 */
+            font-size: 16px;
+            font-size: 1.5rem; /* 12pt * 1.5 = 18pt */
+            font-weight: 700; /* 글자 굵기 */
+            font-weight: lighter;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>제목</h2>
+        <p>CSS는 Cascading Style Sheets의 줄임말로,
+            HTML 문서의 디자인과 레이아웃을 담당하는 스타일링 언어예요.
+            <br/>
+            🔧 CSS가 하는 일
+            HTML은 웹페이지의 뼈대를 만들고,
+            CSS는 그 뼈대에 색칠하고, 정렬하고, 크기를 조정하고, 애니메이션을 넣는 역할을 해요.
+            
+            예를 들어, 아래 HTML이 있다고 해볼게요</p>
+    </div>
+</body>
+</html>

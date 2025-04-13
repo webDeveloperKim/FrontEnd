@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox</title>
+    <style>
+        *{
+            margin:0;
+            box-sizing:border-box;
+        }
+        .container{
+            width:100vw;
+            height:100vh;
+        }
+
+        .flex-box{
+            display:flex;
+            justify-content: center;
+            gap:20px;
+        }
+        .box{
+           width:min(350px, 100%);
+           min-width:350px;
+           min-height:350px;
+           text-align:center;
+           background:#0071FF;
+        }    
+        
+        @media(max-width:800px){
+            .container{
+                width:100vw;
+            }
+            .flex-box{
+                justify-content:space-between;
+                flex-wrap:wrap;
+                gap:20px;
+            }
+            .box{
+            
+                width:min(350px, calc(50vw - 20px));
+                min-width:0;
+            }
+        }
+
+        @media(max-width:575px){
+            .box{
+                width:100vw;
+                min-height:0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 데스크톱 화면 : 4개가 모두 가로로 배치(1줄) -->
+    <!-- 태블릿 화면 : 2개씩 가로로 배치(2줄) : 800px -->
+    <!-- 모바일 화면 : 1개씩 가로로 배치(4줄) : 575px -->
+    <div class="container">
+        <div class="flex-box">
+            <div class="box">
+                <h2>제목</h2>
+                <P>본문글</P>
+            </div>
+            <div class="box">
+                <h2>제목</h2>
+                <P>본문글</P>
+            </div>
+            <div class="box">
+                <h2>제목</h2>
+                <P>본문글</P>
+            </div>
+            <div class="box">
+                <h2>제목</h2>
+                <P>본문글</P>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

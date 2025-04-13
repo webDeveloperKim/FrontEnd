@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, 
+    initial-scale=1.0">
+    <title>flexbox</title>
+    <style>
+        .container{
+            border:8px solid black;
+    
+            
+            display:flex;
+            justify-content:center;
+            align-items: flex-start;
+
+            gap:20px;
+
+            /* flex-wrap: nowrap => 흘러내리지 않고 아이템이 줄어듦 
+               flex-wrap: wrap => 들어갈 자리가 없으면 흘러내림*/
+            flex-wrap: nowrap;
+            flex-wrap: wrap;
+        }
+        .box{
+            height:150px;
+            width:150px;
+            background:#0071FF;
+            font-size:2.5rem;
+        }
+
+        @media(max-width:575px){
+            .container{
+                flex-wrap:wrap;
+            }
+            .box{
+                width:100vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+    </div>
+</body>
+</html>
