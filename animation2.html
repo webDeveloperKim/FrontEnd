@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ANIMATION</title>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing: border-box;
+    }
+    .container{
+      min-height:100vh;
+      background:yellowgreen;
+    }
+    .box{
+      width:150px;
+      height:150px;
+      background:aquamarine;
+
+      
+    }
+
+    .box:hover{
+      animation: 2s 이름;
+      animation-duration: 2s;
+      animation-name: 이름;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      animation-iteration-count: 3;
+
+      animation-fill-mode: forwards;    /* 끝나도 돌아가지 않게 */
+      animation-fill-mode: backwards;   /* 끝나면 원래대로 돌아가게 */
+
+      animation: 2s 이름;
+    }
+
+    /* animation 을 하려면 @keyframes 로 동작을 만들어놓아야한다 */
+    @keyframes 이름{
+      0%{
+        /* 시작 */
+      }
+
+      50%{
+        border-radius: 1000px;
+      }
+
+      100%{
+        /* 종료 */
+        scale: 1.5;   /* 애니메이션 크기 1.5배 */
+        /*transform: translate(100px, 100px);*/ /* 이동 */
+        rotate: 90deg;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">
+
+    </div>
+  </div>
+
+</body>
+</html>

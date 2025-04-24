@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        .container{
+            min-height:2000px;
+            background:yellowgreen;
+        }
+
+        .box{
+            width:150px;
+            height:150px;
+            background:aquamarine;
+        }
+
+        .box-position{
+            /* position : left, right, top, bottom, z-index 사용할 수 있게 된다 */
+            position:static; /* 기본값 */
+            position:relative; /* 나를 기준으로 이동 */
+            
+            position:absolute; 
+            position:fixed; /* 고정 위치 (스크롤이 이동해도 고정되어있음) */
+            position:sticky; /* 스크롤이 벗어나면 고정위치로 변경 */
+
+            position:relative;
+            left:100px; /* 내 왼쪽 모서리를 기준으로 100px 이동 */
+            top:100px; /* 원래 위쪽 모서리로부터 100px 이동 */
+           
+        }
+
+        .position-scroll{
+            /* position : left, right, top, bottom, z-index */
+        
+            position:sticky;
+            left:300px;
+            top:300px;
+
+            position:fixed;
+            left:300px;
+            top:300px;
+        }
+        .top{
+            height:300px;
+            background:gold;
+        }
+        .bottom{
+            height:100px;
+            background:red;
+        }
+        .parent{
+            width:150px;
+            height:150px;
+            position:relative;
+            background:beige;
+            left:50px;
+            top:50px;
+        }
+        .child{
+            position:absolute; /* 바깥의 relative를 기준으로 이동 */
+            width:50px;
+            height:50px;
+            background:black;
+            right:0; /* relative 의 가장 오른쪽 */
+            top:20px; 
+            z-index : 5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Position : static, fixed, sticky, relative, absolute -->
+        <!-- left, top, right, bottom, z-index를 사용하기 위해서 position 사용 -->
+        <!-- fixed : 화면 고정(HTML 화면 기준) -->
+        <!-- sticky : position 이 없는 것처럼 동작하다가 스크롤이 벗어나면 fixed 처럼 동작 -->
+        <!-- static : 기본값 -->
+        <!-- relative : 내 모서리를 기준으로 이동 -->
+        <!-- absolute : 감싸고 있는 relative의 모서리를 기준으로 이동 -->
+        <div class="box box-position"></div>
+        <div class="top"></div>
+        <div class="box position-scroll"></div>
+        <div class="bottom"></div>
+
+        <div class="parent">
+            <div class="child">
+
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
