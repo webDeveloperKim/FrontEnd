@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>셀렉터</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        a{
+            text-decoration:none;
+            color:inherit;
+            display:inline-block;
+            margin-top:30px; /* inline은 버그 있거나 적용 안됨 */
+            padding:0.5em 1.25em;
+            background:blueviolet;
+            border-radius:1000px;
+        }
+        a:hover{
+            /* hover 마우스를 올려놓을떄 적용 */
+            color:white;
+        }
+        a:active{
+            /* active 마우스가 눌렸을 때 적용 */
+            color:red;
+        }
+        a:visited{
+            /* visited 이미 방문한 적이 있을 때 적용 */
+            color:brown;
+        }
+        input{
+            padding:0.5em 1em;
+        }
+        input:focus{
+            /* focus 클릭되서 입력이 가능한 상태일 때 */
+            border:2px solid yellowgreen;
+            outline:none;
+            border-radius:1000px;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://google.com/">구글로 이동</a>
+    <hr/>
+    <input>
+</body>
+</html>

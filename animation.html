@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션</title>
+    <style>
+        .box{
+            width:150px;
+            height:150px;
+            margin : 50px auto;
+            background:aquamarine;
+
+            transition-duration:2s; /* 걸리는 시간 */
+            transition-property: background-color;  /* transition 적용 대상 스타일 */
+            transition: 2s all;
+            transition-timing-function: ease; /* 중간만 빠름 */
+            transition-timing-function: linear; /* 일정한속도 */
+            transition-timing-function: ease-in;
+            transition-timing-function: ease-out;
+            transition-timing-function: ease-in-out; 
+            transition-timing-function: cubic-bezier(0.5,0.2,0.8,0.9);
+            /* 0,0 => 50% 시간동안 , 20% 변화해 => 80% 시간동안 90% 변화해 => 1,1 */
+            transition-timing-function: ease-in-out;
+            transition-delay:1s;  /* 1초 후부터 변화하기 시작 */
+
+            /* 모서리는 1초동안 바뀌고, 배경색은 3초동안 바꿔라 */
+            transition: 1s border-radius, 3s background-color;
+           
+        }
+        .box:hover{
+            background:yellowgreen;
+            border-radius: 1000px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 움직임 효과 : transition, animation -->
+     <!-- transition : 걸리는 시간을 늘린다 (hover) -->
+      <div class="box"></div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>셀렉터1</title>
+    <style>
+        .class{
+            /* 클래스 셀렉터 */
+        }
+        #id1{
+            /* 아이디 셀렉터 */
+        }
+        div{
+            /* 태그 셀렉터 */
+        }
+        *{
+            /* 모든 태그에 대해서 */
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        input{
+            font-size:1.25rem;
+        }
+        input[type="email"]{
+            /* 대괄호를 통해서 속성을 특정할 수 있다 */
+            color:blueviolet;
+        }
+        input[type="password"]{
+            border:1px solid red;
+        }
+        input[type="password"], input[type="email"]{
+            padding:0.5em 1.25em;
+            display:block;
+            margin:10px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- 셀렉터 : 스타일을 적용하기 위해
+     연결하는 선택자 (클래스 셀렉터, 아이디 셀렉터, 태그 셀렉터) -->
+     <div class="class1">
+        <form>
+            <input type="email" placeholder="이메일을 입력하세요" />
+            <input type="password" placeholder="비밀번호를 입력하세요"/>
+            <input type="submit" value="로그인"/>
+        </form>
+     </div>
+     <div id="id1"></div>
+</body>
+</html>

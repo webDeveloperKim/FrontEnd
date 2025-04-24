@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>셀렉터</title>
+    <style>
+        .header p{
+            /* 셀렉터 사이에 띄어쓰기를 하면 */
+            /* .header 안에 있는 모든 p */
+            color:blue;
+        }
+        .box > p{
+            /* 셀렉터 사이에 > 를 쓰면 */
+            /* .box 바로 밑에 있는 p */
+            color:red;
+        }
+        
+        h3 ~ p{
+            /* 셀렉터 사이에 ~ 을 쓰면 */
+            /* h3 옆에 있는 모든 p */
+            color:brown;
+        }
+
+        h3 + p{
+            /* 셀렉터 사이에 + 를 쓰면 */
+            /* h3 바로 옆(다음)에 있는 p */
+            color:purple !important;
+            /* !important 만약 겹치면 우선적으로 적용 */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2>제목</h2>
+        <div>
+            <p>본문글1</p>
+        </div>
+        <p>본문글2</p>
+    </div>
+
+    <div class="box">
+        <h2>소제목</h2>
+        <div>
+            <p>내용1</p>
+        </div>
+        <p>내용2</p>
+    </div>
+
+    <div class="content">
+        <h3>소제목</h3>
+        <p>본문글1</p>
+        <p>본문글2</p>
+        <p>본문글3</p>
+    </div>
+</body>
+</html>
